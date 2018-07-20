@@ -28,7 +28,7 @@ const frame = 100
 class DraftPaginator extends PureComponent {
   state = {
     index: 0,
-    range: 50,
+    range: 300,
   }
 
   truncate = () => {
@@ -93,6 +93,20 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+        <DraftPaginator
+          onChange={this.onChange}
+          editorState={this.state.editorState}
+        >
+          {({ editorState, onChange }) => (
+            <Editor
+              editorState={editorState}
+              onChange={onChange}
+            />
+          )}
+        </DraftPaginator>
+        <Pagination>
+          <input type="text" />
+        </Pagination>
       </Wrapper>
     );
   }
