@@ -21,7 +21,6 @@ body {
 .public-DraftEditor-content {
   padding: 1em;
   position: absolute;
-  overflow: auto;
   top: 0;
   left: 0;
   width: 100%;
